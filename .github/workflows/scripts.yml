@@ -29,7 +29,7 @@ jobs:
           script: |
             const crypto = require('crypto'); 
             github.projects.createCard({
-            column_id: crypto.uuid(),
+            column_id: crypto.randomUUID(),
             content_id: context.payload.issue.id,
             content_type: "Issue"
             });
