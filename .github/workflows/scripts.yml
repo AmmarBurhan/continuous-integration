@@ -28,6 +28,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const crypto = require('crypto')
+            console.log({crypto});
             github.projects.createCard({
             column_id: crypto.randomUUID(),
             content_id: context.payload.issue.id,
